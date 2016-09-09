@@ -1,6 +1,7 @@
-var cacheName = 'v0.1';
+var cacheName = 'v0.2';
 
-var music = 'http://7xs1gu.com1.z0.glb.clouddn.com/0.m4a';
+var music = 'https://od8ui6ppt.qnssl.com/0.m4a';
+
 var fileToCache = [
     './',
     './index.html',

@@ -1,6 +1,5 @@
 (function(){
-    var musicUrl = 'http://7xs1gu.com1.z0.glb.clouddn.com/0.m4a';
-    var Player = function(url){
+    var Player = function(){
         this.disc = document.getElementById('disc');
         this.audio = document.getElementById('audio');
         this.playing = false;
@@ -34,6 +33,6 @@
            .then(function() { console.log("Service Worker Registered"); });
     }
     window.addEventListener('load', function(){
-        new Player(musicUrl);
+        new Player();
     });
 })();
