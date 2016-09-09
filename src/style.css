@@ -1,0 +1,53 @@
+body,body::after,body::before{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body::before{
+    content: '';
+    z-index: -1;
+    background-color: rgba(0,0,0,.55);
+}
+body::after{
+    content: '';
+    z-index: -2;
+    background: url(http://7xs1gu.com1.z0.glb.clouddn.com/16-9-9/43296416.jpg);
+    background-size: 100% 100%;
+    -webkit-filter: blur(4px);
+    filter: blur(4px);
+}
+.disc{
+    width: 140px;
+    height: 140px;
+    color: #fff;
+    border: 40px solid #333;
+    border-radius: 50%;
+    background: #000 url(http://7xs1gu.com1.z0.glb.clouddn.com/16-9-9/43296416.jpg) 0 / 100% 100%;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    animation: rotate 5s linear infinite;
+    box-shadow: 0 0 3px 0 #fff;
+}
+.disc:hover{
+    box-shadow: 0 0 6px 0 #fff;
+}
+.pause{
+    animation-play-state: paused;
+}
+
+@keyframes rotate {
+    to{
+        transform: rotate(360deg);
+    }
+}

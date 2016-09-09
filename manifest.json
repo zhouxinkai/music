@@ -1,0 +1,13 @@
+{
+  "name": "Rain",
+  "short_name": "rain",
+  "icons": [{
+    "src": "images/icon.png",
+    "sizes": "128x128",
+    "type": "image/png"
+  }],
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#333",
+  "theme_color": "#333"
+}
