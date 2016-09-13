@@ -1,57 +1,89 @@
 body,body::after,body::before{
     top: 0;
     left: 0;
+
     width: 100%;
     height: 100%;
 }
 body{
     position: fixed;
-    margin: 0;
+
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
-    justify-content: center;
-    align-items: center;
+
+    margin: 0;
+
+    -webkit-box-pack: center;
+
+        -ms-flex-pack: center;
+
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-tap-highlight-color: transparent;
 }
 body::after,body::before{
     position: absolute;
 }
 body::before{
-    content: '';
     z-index: -1;
+
+    content: '';
+
     background-color: rgba(0,0,0,.55);
 }
 body::after{
-    content: '';
     z-index: -2;
     top: -5%;
     left: -5%;
+
     width: 110%;
     height: 110%;
+
+    content: '';
+
     background: url(../images/background.jpg);
     background-size: 100% 100%;
+
     -webkit-filter: blur(4px);
     filter: blur(4px);
 }
 .disc{
     width: 140px;
     height: 140px;
+
+    cursor: pointer;
+    -webkit-animation: rotate 5s linear infinite;
+            animation: rotate 5s linear infinite;
+
     color: #fff;
     border: 40px solid #333;
     border-radius: 50%;
     background: #000 url(../images/background.jpg) 0 / 100% 100%;
-    cursor: pointer;
-    animation: rotate 5s linear infinite;
     box-shadow: 0 0 3px 0 #fff;
 }
 .disc:hover{
     box-shadow: 0 0 6px 0 #fff;
 }
 .pause{
-    animation-play-state: paused;
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+}
+
+@-webkit-keyframes rotate {
+    to{
+        -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+    }
 }
 
 @keyframes rotate {
     to{
-        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
     }
 }

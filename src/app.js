@@ -2,7 +2,11 @@
     var Player = function(){
         this.disc = document.getElementById('disc');
         this.audio = document.getElementById('audio');
-        this.playing = false;
+        if(audio.play){
+            this.playing = true;
+        }else{
+            this.playing = false;
+        }
         this.addEventListener();
     };
 

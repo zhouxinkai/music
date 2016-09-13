@@ -1,4 +1,4 @@
-var cacheName = 'v0.1.1';
+var cacheName = 'v0.1.2';
 
 var music = 'https://od8ui6ppt.qnssl.com/0.m4a';
 
