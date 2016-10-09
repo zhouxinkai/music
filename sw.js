@@ -1,6 +1,6 @@
-var cacheName = 'v0.1.2';
+var cacheName = 'v0.1.3';
 
-var music = 'https://od8ui6ppt.qnssl.com/0.m4a';
+var music = '0.mp3';
 
 var fileToCache = [
     './',
@@ -8,8 +8,9 @@ var fileToCache = [
     './src/style.css',
     './src/app.js',
     './images/icon.png',
-    './images/background.jpg'
-];
+    './images/cover.jpg',
+    './0.mp3'
+]
 
 self.addEventListener('install', function(event){
     event.waitUntil(
@@ -35,21 +36,9 @@ self.addEventListener('activate', function(event) {
 });
 
 self.addEventListener('fetch', function(event){
-    if (event.request.url.indexOf(music) === 0) {
-        event.respondWith(
-            fetch(event.request)
-                .then(function(response) {
-                    return caches.open(cacheName).then(function(cache) {
-                        cache.put(event.request.url, response.clone());
-                        return response;
-                    });
-                })
-        );
-    } else {
-        event.respondWith(
-            caches.match(event.request).then(function (response) {
-                return response || fetch(event.request);
-            })
-        )
-    }
+    event.respondWith(
+        caches.match(event.request).then(function (response) {
+            return response || fetch(event.request);
+        })
+    )
 });

@@ -34,7 +34,7 @@ body::before{
 
     content: '';
 
-    background-color: rgba(0,0,0,.55);
+    background-color: rgba(0, 0, 0, .55);
 }
 body::after{
     z-index: -2;
@@ -46,29 +46,27 @@ body::after{
 
     content: '';
 
-    background: url(../images/background.jpg);
+    background: url(../images/cover.jpg);
     background-size: 100% 100%;
 
-    -webkit-filter: blur(4px);
-    filter: blur(4px);
+    -webkit-filter: blur(15px);
+    filter: blur(15px);
 }
 .disc{
-    width: 140px;
-    height: 140px;
+    width: 45vmin;
+    height: 45vmin;
 
     cursor: pointer;
-    -webkit-animation: rotate 5s linear infinite;
-            animation: rotate 5s linear infinite;
+    -webkit-animation: rotate 10s linear infinite;
+            animation: rotate 10s linear infinite;
 
     color: #fff;
-    border: 40px solid #333;
+    border: 10vmin solid #333;
     border-radius: 50%;
-    background: #000 url(../images/background.jpg) 0 / 100% 100%;
-    box-shadow: 0 0 3px 0 #fff;
+    background: #000 url(../images/cover.jpg) 0 / 100% 100%;
+    box-shadow: 0 0 6px 0 #000;
 }
-.disc:hover{
-    box-shadow: 0 0 6px 0 #fff;
-}
+
 .pause{
     -webkit-animation-play-state: paused;
             animation-play-state: paused;

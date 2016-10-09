@@ -1,6 +1,6 @@
 {
-  "name": "Listen To The Rain",
-  "short_name": "rain",
+  "name": "Listen To The Music",
+  "short_name": "music",
   "icons": [{
     "src": "images/icon.png",
     "sizes": "128x128",

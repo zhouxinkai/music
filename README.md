@@ -1,6 +1,6 @@
-# rain
+# music
 
-A simple offline web app, you can Listen to The Rain all day.
+A simple offline web app
 
 ## What is offline web app
 
@@ -12,4 +12,4 @@ If you are use Chrome in Android, you can click the menu button and click "add t
 
 If you don't have a Chrome browser in you Android device, I strongly recommend you download one.
 
-If you already have one, visit it at: [https://wy-ei.github.io/rain/](https://wy-ei.github.io/rain/).
+If you already have one, visit it at: [https://wy-ei.github.io/music/](https://wy-ei.github.io/music/).
