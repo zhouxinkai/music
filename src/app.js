@@ -36,7 +36,7 @@
            .register('./sw.js')
            .then(function() { console.log("Service Worker Registered"); });
     }
-    window.addEventListener('load', function(){
+    document.addEventListener('DOMContentLoaded', function(){
         new Player();
     });
 })();

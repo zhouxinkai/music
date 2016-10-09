@@ -1,4 +1,4 @@
-var cacheName = 'v0.1.3';
+var cacheName = 'v0.1.4';
 
 var music = '0.mp3';
 
@@ -38,7 +38,7 @@ self.addEventListener('activate', function(event) {
 self.addEventListener('fetch', function(event){
     event.respondWith(
         caches.match(event.request).then(function (response) {
-            return response || fetch(event.request);
+            return response || fetch(event.request)
         })
     )
 });
