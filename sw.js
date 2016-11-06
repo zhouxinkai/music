@@ -1,4 +1,4 @@
-var cacheName = 'v0.1.4';
+var cacheName = 'v0.1.5';
 
 var music = '0.mp3';
 

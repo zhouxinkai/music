@@ -33,7 +33,7 @@
 
     if('serviceWorker' in navigator) {
         navigator.serviceWorker
-           .register('./sw.js')
+           .register('/music/sw.js')
            .then(function() { console.log("Service Worker Registered"); });
     }
     document.addEventListener('DOMContentLoaded', function(){
