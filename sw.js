@@ -1,4 +1,4 @@
-var cacheName = 'v0.1.5';
+var cacheName = 'v0.1.6';
 
 var music = '0.mp3';
 
@@ -9,15 +9,14 @@ var fileToCache = [
     './src/app.js',
     './images/icon.png',
     './images/cover.jpg',
-    './0.mp3'
-]
+    'https://ogufah3ag.qnssl.com/0.mp3'
+];
 
 self.addEventListener('install', function(event){
     event.waitUntil(
         caches.open(cacheName).then(function(cache){
             return cache.addAll(fileToCache).then(function(){
                 self.skipWaiting();
-                console.log('done');
             });
         })
     );
@@ -41,4 +40,13 @@ self.addEventListener('fetch', function(event){
             return response || fetch(event.request)
         })
     )
+});
+
+
+self.addEventListener('fetch', function(event) {
+    event.respondWith(
+      caches.match(event.request).then(function(response) {
+        return response || fetch(event.request);
+      })
+    );
 });
