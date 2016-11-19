@@ -1,6 +1,4 @@
-var cacheName = 'v0.1.6';
-
-var music = '0.mp3';
+var cacheName = 'v0.2.0';
 
 var fileToCache = [
     './',
@@ -40,13 +38,4 @@ self.addEventListener('fetch', function(event){
             return response || fetch(event.request)
         })
     )
-});
-
-
-self.addEventListener('fetch', function(event) {
-    event.respondWith(
-      caches.match(event.request).then(function(response) {
-        return response || fetch(event.request);
-      })
-    );
 });
