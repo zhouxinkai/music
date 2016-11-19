@@ -1,4 +1,4 @@
-var cacheName = 'v0.2.0';
+var cacheName = 'v0.2.1';
 
 var fileToCache = [
     './',
@@ -7,6 +7,7 @@ var fileToCache = [
     './src/app.js',
     './images/icon.png',
     './images/cover.jpg',
+    './images/loading.svg',
     'https://ogufah3ag.qnssl.com/0.mp3'
 ];
 

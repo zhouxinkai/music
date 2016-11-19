@@ -2,6 +2,7 @@
     var Player = function(){
         this.disc = document.getElementById('disc');
         this.audio = document.getElementById('audio');
+        this.canplay = false;
         if(audio.play){
             this.playing = true;
         }else{
@@ -11,24 +12,37 @@
     };
 
     Player.prototype.addEventListener = function(){
+        var _this = this;
         this.disc.addEventListener('click', function (){
-            if(this.playing){
-                this.pause();
+            if(_this.playing){
+                _this.pause();
             }else{
-                this.play();
+                _this.play();
             }
-        }.bind(this));
+        });
+        this.audio.addEventListener('canplay', function(){
+            _this.canplay = true;
+            _this.play();
+            _this.disc.removeChild(_this.disc.firstElementChild);
+        });
+        this.audio.addEventListener('play', function(){
+            _this.disc.classList.remove('pause');
+        });
+        this.audio.addEventListener('pause', function(){
+            _this.disc.classList.add('pause');
+        });
     };
 
     Player.prototype.play = function () {
+        if(!this.canplay){
+            return;
+        }
         this.audio.play();
         this.playing = true;
-        this.disc.classList.remove('pause');
     };
     Player.prototype.pause = function() {
         this.audio.pause();
         this.playing = false;
-        this.disc.classList.add('pause');
     };
 
     if('serviceWorker' in navigator) {
